@@ -1,1 +1,1 @@
-from jopa import app
+from app import app

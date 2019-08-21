@@ -1,0 +1,15 @@
+<!-- Шапка страницы -->
+<html>
+    <head>
+        {% if title %} <!-- условный опреатор из  Jinja2 -->
+        <title>{{ title }} - Microblog</title>
+        {% else %}
+        <title>Welkome to Microblog</title>
+        {% endif %}
+    </head>
+    <body>
+    <div>Microblog: <a href="/index">Home</a></div>
+    <hr>
+    {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,11 @@
+<!--extends устагавливает ссылку наследования шаблона из base.html.
+так что Jinja2 знает, что когда ему предлагается визуализировать index.html,
+он должен встроить его в base.html. -->
+{% extends "base.html" %}
+{% block content %}
+    <h1>HI, {{ user.username }}!</h1>
+    {% for post in posts %} <!-- Цикл for структура управления-->
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b>
+</p></div>
+    {% endfor %}
+{% endblock %}
